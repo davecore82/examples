@@ -12,13 +12,13 @@ spec:
         spec:
           containers:
           - name: tensorflow
-            image: gcr.io/<project>/<image-name>/cpu:v1
+            image: gcr.io/ubuntu-os-support/davecore-financialtimeseries/cpu:v1
             command:
               - python
               - run_preprocess_train_deploy.py
               - --model=DeepModel
               - --epochs=30001
-              - --bucket=<BUCKET_NAME>
+              - --bucket=davecorefinancialtimeseries
               - --tag=v2
             workingDir: "/opt/workdir"
             env:
